@@ -13,7 +13,16 @@
 
     // Fetch products
     const { data : products } =await useFetch('https:fakestoreapi.com/products');
-    console.log(products);
+
+    useHead({
+        title: 'Nuxt Azer | Products',
+        meta: [
+            {
+                name: 'description',
+                content: 'List of products'
+            }
+        ]
+    })
 </script>
 
 <style scoped>
